@@ -1,8 +1,9 @@
 import React from 'react'
-import Navbar from './components/ui/shared/Navbar'
-import { createBrowserRouter } from 'react-router-dom'
-import Login from './components/ui/auth/Login'
-import Signup from './components/ui/auth/Signup'
+import Navbar from './components/shared/Navbar'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Login from './components/auth/Login'
+import Signup from './components/auth/Signup'
+import Home from './components/Home'
 
 const App = () => {
   const appRouter = createBrowserRouter([
@@ -21,7 +22,7 @@ const App = () => {
   ])
   return (
     <>
-      <Navbar />
+      <RouterProvider router={appRouter} />
     </>
   )
 }
